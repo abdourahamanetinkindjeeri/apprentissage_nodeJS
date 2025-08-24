@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <style>
+      body {
+        font-family: Arial;
+        margin: 50px;
+        background: #f0f0f0;
+      }
+      .user-card {
+        background: white;
+        margin: 10px 0;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .user-name {
+        color: #2196f3;
+        font-weight: bold;
+      }
+      .user-age {
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+
+    <% users.forEach(user => { %>
+    <div class="user-card">
+      <div class="user-name"><%= user.name %></div>
+      <div class="user-age"><%= user.age %> ans</div>
+
+      <% if (user.email) { %>
+      <div class="user-email"><%= user.email %></div>
+      <% } %>
+    </div>
+    <% }) %>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>404 - Page non trouvée</title>
+    <style>
+      body {
+        background: #1a1a1a;
+        color: #fff;
+        font-family: "Segoe UI", Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .error {
+        font-size: 8rem;
+        font-weight: bold;
+        letter-spacing: 1rem;
+        animation: bounce 1.2s infinite alternate;
+        color: #ff4c4c;
+        text-shadow: 0 0 20px #ff4c4c, 0 0 40px #ff4c4c44;
+      }
+      @keyframes bounce {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(-30px);
+        }
+      }
+      .message {
+        font-size: 2rem;
+        margin-top: 1rem;
+        text-align: center;
+        color: #eee;
+        animation: fadeIn 2s;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .back {
+        margin-top: 2rem;
+        padding: 0.7rem 2rem;
+        background: #ff4c4c;
+        color: #fff;
+        border: none;
+        border-radius: 30px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: background 0.2s;
+        box-shadow: 0 2px 10px #0005;
+      }
+      .back:hover {
+        background: #ff1a1a;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="error">404</div>
+    <div class="message">
+      Oups ! Cette page n'existe pas.<br />Retour à l'accueil ?
+    </div>
+    <button class="back" onclick="window.location.href='/users'">Users</button>
+  </body>
+</html>

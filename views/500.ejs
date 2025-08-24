@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Erreur serveur</title>
+    <style>
+      body {
+        background: #1a1a1a;
+        color: #fff;
+        font-family: "Segoe UI", Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .error {
+        font-size: 7rem;
+        font-weight: bold;
+        letter-spacing: 1rem;
+        color: #ffb300;
+        text-shadow: 0 0 20px #ffb300, 0 0 40px #ffb30044;
+        animation: shake 0.7s infinite alternate;
+      }
+      @keyframes shake {
+        0% {
+          transform: rotate(-3deg) scale(1.05);
+        }
+        100% {
+          transform: rotate(3deg) scale(1.1);
+        }
+      }
+      .message {
+        font-size: 2rem;
+        margin-top: 1rem;
+        text-align: center;
+        color: #eee;
+        animation: fadeIn 2s;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .back {
+        margin-top: 2rem;
+        padding: 0.7rem 2rem;
+        background: #ffb300;
+        color: #222;
+        border: none;
+        border-radius: 30px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: background 0.2s;
+        box-shadow: 0 2px 10px #0005;
+      }
+      .back:hover {
+        background: #ff8800;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="error">500</div>
+    <div class="message">
+      Oups ! Une erreur serveur est survenue.<br />On revient à l'accueil ?
+    </div>
+    <button class="back" onclick="window.location.href='/users'">
+      Liste des users
+    </button>
+  </body>
+</html>
