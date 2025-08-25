@@ -1,0 +1,65 @@
+<div
+  style="
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #eee;
+  "
+>
+  <div
+    style="
+      background: #f9f9f9;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 2px 8px #eee;
+    "
+    style="
+      border: none;
+      border-radius: 18px;
+      box-shadow: 0 4px 16px rgba(30, 60, 114, 0.08);
+      padding: 36px 32px;
+      text-align: center;
+    "
+  >
+    <img
+      src="<%= qrCodePath %>"
+      alt="QR <%= user.name %>"
+      width="160"
+      style="margin-bottom: 1rem"
+    />
+    <h1
+      style="font-size: 1.25rem; margin-bottom: 0.5rem"
+      style="color: #1e3c72; font-size: 2rem; font-weight: 700"
+    >
+      <%= user.name %>
+    </h1>
+    <a
+      href="<%= user.github %>"
+      target="_blank"
+      style="
+        display: block;
+        margin-bottom: 1rem;
+        color: #24292e;
+        text-decoration: underline;
+      "
+      style="color: #2a5298; text-decoration: underline; font-weight: 600"
+      >GitHub</a
+    >
+    <a
+      href="/users"
+      style="
+        background: #fff;
+        color: #007bff;
+        border: 1px solid #007bff;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        text-decoration: none;
+        margin-top: 0.5rem;
+        display: inline-block;
+      "
+      >Retour à la liste</a
+    >
+  </div>
+</div>

@@ -1,0 +1,108 @@
+<div
+  style="
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #eee;
+  "
+>
+  <h1 style="margin-bottom: 1.5rem; margin-top: 1rem">
+    Liste des utilisateurs
+  </h1>
+  <% if (users.length === 0) { %>
+  <div
+    style="
+      background: #e7f3ff;
+      color: #31708f;
+      padding: 1rem;
+      border-radius: 4px;
+    "
+  >
+    Aucun utilisateur enregistré.
+  </div>
+  <% } else { %>
+  <div
+    style="
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    "
+    style="
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
+    "
+  >
+    <% users.forEach(u => { %>
+    <div
+      style="
+        background: #f9f9f9;
+        border-radius: 8px;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 2px 8px #eee;
+      "
+    >
+      <a href="/users/<%=u.id%>">
+        <img
+          src="/qr-code/user-<%=u.id%>.png"
+          alt="QR <%=u.name%>"
+          width="120"
+          style="margin-bottom: 0.5rem"
+        />
+      </a>
+      <h2 style="margin-bottom: 0.25rem; font-size: 1.25rem"><%= u.name %></h2>
+      <a
+        href="<%= u.github %>"
+        target="_blank"
+        style="display: block; margin-bottom: 0.5rem"
+        style="color: #2a5298; text-decoration: underline"
+        >GitHub</a
+      >
+      <a
+        href="/users/<%=u.id%>"
+        style="
+          background: #007bff;
+          color: #fff;
+          border: none;
+          padding: 0.5rem 1rem;
+          border-radius: 4px;
+          text-decoration: none;
+          font-size: 0.9rem;
+        "
+        >Détails</a
+      >
+    </div>
+    <% }) %>
+  </div>
+  <% } %>
+  <div style="margin-top: 2rem">
+    <a
+      href="/add-user"
+      style="
+        background: #28a745;
+        color: #fff;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        text-decoration: none;
+      "
+      >Ajouter un utilisateur</a
+    >
+    <a
+      href="/dashboard"
+      style="
+        background: #fff;
+        color: #007bff;
+        border: 1px solid #007bff;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        text-decoration: none;
+        margin-left: 0.5rem;
+      "
+      >Dashboard</a
+    >
+  </div>
+</div>

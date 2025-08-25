@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Alice",
+      "github": "https://github.com/alice"
+    },
+    {
+      "id": "2",
+      "name": "Bob",
+      "github": "https://github.com/bob"
+    },
+    {
+      "id": "3",
+      "name": "jeeri",
+      "github": "https://github.com/abdourahamanetinkindjeeri"
+    },
+    {
+      "id": "4",
+      "name": "add",
+      "github": "http://localhost:3000/add-user"
+    },
+    {
+      "id": 5,
+      "name": "L2I",
+      "github": "https://github.com/gaye-00/Cours-L2I-Promo-1"
+    }
+  ]
+}

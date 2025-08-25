@@ -1,0 +1,90 @@
+<div
+  style="
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+  "
+  id="star-bg"
+  style="
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #1e3c72;
+    color: #fff;
+  "
+>
+  <div
+    style="font-size: 4rem; color: #dc3545; margin-bottom: 1rem"
+    style="
+      font-size: 7rem;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      color: #fff;
+      text-shadow: 0 2px 16px #2a5298, 0 0px 80px #fff2;
+      animation: bounce404 1.5s infinite alternate
+        cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    "
+  >
+    404
+  </div>
+  <div
+    style="font-size: 1.5rem; color: #dc3545; margin-bottom: 1rem"
+    style="
+      font-size: 1.5rem;
+      margin-bottom: 24px;
+      color: #fff;
+      text-shadow: 0 2px 8px #2a5298;
+    "
+  >
+    <%= message || "Oups ! Cette page n'existe pas." %>
+  </div>
+  <a
+    href="/"
+    style="
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      text-decoration: none;
+      margin-top: 1rem;
+    "
+    style="
+      background: linear-gradient(90deg, #2a5298 0%, #1e3c72 100%);
+      border: none;
+      font-weight: 600;
+      border-radius: 8px;
+      color: #fff;
+      padding: 12px 32px;
+      font-size: 1.1rem;
+      box-shadow: 0 2px 12px #0002;
+      transition: background 0.2s, transform 0.2s;
+    "
+    >Retour à l'accueil</a
+  >
+</div>
+<script>
+  // Génération dynamique des étoiles animées côté client
+  const starBg = document.getElementById("star-bg");
+  for (let i = 0; i < 20; i++) {
+    const star = document.createElement("div");
+    star.className = "star";
+    star.style.position = "absolute";
+    star.style.width = "8px";
+    star.style.height = "8px";
+    star.style.background = "#fff8";
+    star.style.borderRadius = "50%";
+    star.style.top = Math.random() * 90 + 5 + "vh";
+    star.style.left = Math.random() * 90 + 5 + "vw";
+    star.style.animation = "twinkle 2s infinite alternate";
+    star.style.animationDelay = Math.random() * 2 + "s";
+    starBg.appendChild(star);
+  }
+  const style = document.createElement("style");
+  style.innerHTML = `@keyframes bounce404{0%{transform:translateY(0);}100%{transform:translateY(-30px) scale(1.05);}}@keyframes twinkle{0%{opacity:0.5;}100%{opacity:1;}}`;
+  document.head.appendChild(style);
+</script>

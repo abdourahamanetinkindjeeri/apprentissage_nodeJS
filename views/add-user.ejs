@@ -1,0 +1,77 @@
+<div
+  style="
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #eee;
+  "
+  style="
+    max-width: 500px;
+    margin: 60px auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(30, 60, 114, 0.08);
+    padding: 36px 32px;
+  "
+>
+  <h1 style="margin-bottom: 1.5rem">Ajouter un utilisateur</h1>
+  <form method="POST" autocomplete="off">
+    <div style="margin-bottom: 1rem">
+      <label for="name" style="display: block; margin-bottom: 0.5rem"
+        >Nom</label
+      >
+      <input
+        type="text"
+        style="
+          width: 100%;
+          padding: 0.5rem;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        "
+        id="name"
+        name="name"
+        placeholder="Nom complet"
+        required
+      />
+    </div>
+    <div style="margin-bottom: 1rem">
+      <label for="github" style="display: block; margin-bottom: 0.5rem"
+        >Lien GitHub</label
+      >
+      <input
+        type="url"
+        style="
+          width: 100%;
+          padding: 0.5rem;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        "
+        id="github"
+        name="github"
+        placeholder="https://github.com/username"
+        required
+      />
+    </div>
+    <button
+      type="submit"
+      style="
+        width: 100%;
+        background: #007bff;
+        color: #fff;
+        border: none;
+        padding: 0.75rem;
+        border-radius: 4px;
+        cursor: pointer;
+      "
+    >
+      Ajouter
+    </button>
+  </form>
+  <div style="margin-top: 1.5rem; text-align: center">
+    <a href="/users" style="color: #007bff; text-decoration: underline"
+      >Retour à la liste</a
+    >
+  </div>
+</div>

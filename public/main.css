@@ -1,0 +1,24 @@
+/* Style global pour layout moderne */
+body {
+  font-family: "Montserrat", sans-serif;
+}
+/* Styles personnalisés ici */
+.sidebar .nav-link {
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  transition: background 0.15s, color 0.15s;
+}
+.sidebar .nav-link.active,
+.sidebar .nav-link:hover {
+  background: #fff2;
+  color: #ffd700 !important;
+}
+.sidebar h2 {
+  color: #ffd700;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+}
+main {
+  min-height: 100vh;
+}
