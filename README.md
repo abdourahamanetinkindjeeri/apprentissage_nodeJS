@@ -11,7 +11,7 @@
 Organiser le code par dossiers (routes, vues, etc.) permet :
 
 - Une meilleure lisibilité et évolutivité du projet.
-- Une maintenance facilitée (ajout/suppression de routes ou vues sans tout casser).
+- Une maintenance facilitée.
 - Un découpage logique par fonctionnalité.
 - Une collaboration plus efficace entre développeurs.
 
